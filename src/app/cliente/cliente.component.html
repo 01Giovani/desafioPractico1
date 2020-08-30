@@ -1,0 +1,109 @@
+<div class="row">
+
+    <div class="col-md-1">     
+    </div>
+
+
+    <div class="col-md-4">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5>Ingresar datos consulta</h5>
+            </div>
+            <div class="ibox-content">
+    
+                <form #clienteform="ngForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <p>Nombre</p>
+                        <input type="text" placeholder="Nombre" id="nombre" [(ngModel)]="cliente.nombre"
+                            class="form-control" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <p>DUI</p>
+                        <input type="text" placeholder="DUI" id="dui" [(ngModel)]="cliente.dui" name="dui"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <p>Nombre Mascota</p>
+                        <input type="text" placeholder="Nombre Mascota" id="nombreMascota"
+                            [(ngModel)]="cliente.nombreMascota" name="nombreMascota" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <p>Tratamiento</p>
+                        <input type="text" placeholder="Tratamiento" id="tratamiento" [(ngModel)]="cliente.tratamiento"
+                            name="tratamiento" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <p>Medicamento</p>
+                        <input type="text" placeholder="Medicamento" id="medicamento" [(ngModel)]="cliente.medicamento"
+                            name="medicamento" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <p>Costo</p>
+                        <input type="number" placeholder="Costo" id="costo" [(ngModel)]="cliente.costo" name="costo"
+                            min="0" class="form-control">
+                    </div>
+
+                    ​<button type="submit" class="btn btn-primary">Guardar</button>
+
+                </form>
+                ​
+            </div>
+        </div>
+    </div>
+    ​
+    <div class="col-md-1">       
+    </div>
+
+
+    <div class="col-md-5">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5>Listado de consultas</h5>
+            </div>
+            <div class="ibox-content">
+
+                <table class="table">
+                    ​
+                    <!-- Encabezado de la tabla -->
+                    <thead>
+                        <tr>                            
+                            <th>Nombre</th>
+                            <th>DUI</th>
+                            <th>Mascota</th>
+                            <th>Tratamiento</th>
+                            <th>Medicamento</th>
+                            <th>Costo</th>
+                            <th>Descuento (%)</th>
+                            <th>Total ($)</th>
+                        </tr>
+                    </thead>
+                    ​
+                    <!-- -->
+
+                    ​
+                    <!-- Cuerpo de la tabla -->
+                    <tbody>
+                        <tr *ngFor="let cli of listaClientes">                            
+                            <td>{{cli.nombre}}</td>     
+                            <td>{{cli.dui}}</td>     
+                            <td>{{cli.nombreMascota}}</td>     
+                            <td>{{cli.tratamiento}}</td>     
+                            <td>{{cli.medicamento}}</td>     
+                            <td>{{cli.costo}}</td>     
+                            <td>{{cli.descuento}}</td>
+                            <td>{{cli.precioFinal}}</td>
+                        </tr>        
+      
+                    </tbody>
+                    ​
+                    <!-- -->​
+                </table>                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-1">     
+    </div>
+
+</div>
+
