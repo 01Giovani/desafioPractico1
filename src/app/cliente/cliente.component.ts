@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Cliente} from '../cliente'
 import { stringify } from 'querystring';
+import { AuthServiceService } from '../shared/services/auth-service.service';
 
 
 @Component({
@@ -15,7 +16,9 @@ export class ClienteComponent implements OnInit {
   cliente = new Cliente('','','','','',0);  
 
 
-  constructor() { }
+  constructor(
+    public authService : AuthServiceService
+  ) { }
 
 
 
