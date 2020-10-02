@@ -11,21 +11,13 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { SingInComponent } from './components/sing-in/sing-in.component';
 import { AuthServiceService } from './shared/services/auth-service.service'
-import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './shared/guard/auth.guard';
 
-
-const routes: Routes = [
-  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
-  { path: 'sign-in', component: SingInComponent },
-  { path: 'inicio', component: ClienteComponent,canActivate:[AuthGuard] }
-];
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClienteComponent,
-
     SingInComponent
   ],
   imports: [
@@ -34,8 +26,8 @@ const routes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    RouterModule.forRoot(routes),
-    RouterModule
+    AppRoutingModule
+
   ],
   providers: [AuthServiceService],
   bootstrap: [AppComponent]

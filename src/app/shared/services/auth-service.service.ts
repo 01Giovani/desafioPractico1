@@ -37,9 +37,12 @@ export class AuthServiceService {
    
     this.afAuth.signInWithEmailAndPassword(email,password)
     .then((result) => {
-      this.ngZone.run(() => {
-        this.router.navigate(['dashboard']);
-      });
+      
+      window.location.href = "http://localhost:4200/inicio";
+      // this.ngZone.run(() => {
+      //   this.router.navigate(['inicio']);
+        
+      // });
       this.SetUserData(result.user);
     }).catch((error) => {
       window.alert(error.message)
@@ -73,9 +76,13 @@ export class AuthServiceService {
   AuthLogin(provider) {
     return this.afAuth.signInWithPopup(provider)
     .then((result) => {
-       this.ngZone.run(() => {
-          this.router.navigate(['inicio']);
-        })
+          
+      window.location.href = "http://localhost:4200/inicio";
+      //  this.ngZone.run(() => {          
+      //     this.router.navigate(['inicio']);
+          
+      //   })
+        
       this.SetUserData(result.user);
     }).catch((error) => {
       window.alert(error)
@@ -93,7 +100,8 @@ export class AuthServiceService {
  // Returns true when user is looged in and email is verified
  get isLoggedIn(): boolean {
   const user = JSON.parse(localStorage.getItem('user'));
-  return (user !== null && user.emailVerified !== false) ? true : false;
+  //return (user !== null && user.emailVerified !== false) ? true : false;
+  return user !== null  ? true : false;
  }
   
 }
