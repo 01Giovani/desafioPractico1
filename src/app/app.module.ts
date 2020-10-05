@@ -9,7 +9,7 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-import { SingInComponent } from './components/sing-in/sing-in.component';
+import { SignInComponent } from './components/Sign-In/Sign-in.component';
 import { AuthServiceService } from './shared/services/auth-service.service'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,7 +24,7 @@ import { ToastrModule } from 'ngx-toastr';
   declarations: [
     AppComponent,
     ClienteComponent,
-    SingInComponent,
+    SignInComponent,
     CatalogoComponent,
     CatalogoServiciosComponent,
     CatalogoConsultasComponent

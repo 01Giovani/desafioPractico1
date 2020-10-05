@@ -3,11 +3,11 @@ import { ToastrService } from 'ngx-toastr';
 import { AuthServiceService } from 'src/app/shared/services/auth-service.service'
 
 @Component({
-  selector: 'app-sing-in',
-  templateUrl: './sing-in.component.html',
-  styleUrls: ['./sing-in.component.css']
+  selector: 'app-Sign-in',
+  templateUrl: './Sign-in.component.html',
+  styleUrls: ['./Sign-in.component.css']
 })
-export class SingInComponent implements OnInit {
+export class SignInComponent implements OnInit {
 
   constructor(
     public authService : AuthServiceService) { }

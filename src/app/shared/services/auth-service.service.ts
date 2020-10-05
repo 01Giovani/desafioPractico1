@@ -83,14 +83,10 @@ export class AuthServiceService {
     .then((result) => {
           
       window.location.href = "http://localhost:4200/inicio";
-      //  this.ngZone.run(() => {          
-      //     this.router.navigate(['inicio']);
-          
-      //   })
       
       this.SetUserData(result.user);
-    }).catch((error) => {
-      window.alert(error)
+    }).catch((error) => {      
+      this.toastr.error('DATOS ERRONEOS', 'Toastr ERROR!');
     })
   }
 
@@ -107,8 +103,9 @@ export class AuthServiceService {
  get isLoggedIn(): boolean {
   this.toastr.success('INICIASTE SESION', 'Toastr fun!');
   const user = JSON.parse(localStorage.getItem('user'));
-  //return (user !== null && user.emailVerified !== false) ? true : false;
-  
+
+
+  //return (user !== null && user.emailVerified !== false) ? true : false;  
   return user !== null  ? true : false;
   
  }

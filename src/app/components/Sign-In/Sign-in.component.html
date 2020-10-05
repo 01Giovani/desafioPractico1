@@ -4,27 +4,21 @@
   <form class="form-signin">
       <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Incia Sesion</h1>
       <div class="social-login">
-
-
         <!-- BOTON DE INICIO DE GOOGLE -->
           <button class="btn google-btn social-btn" type="button" (click)="authService.GoogleAuth()"><span><i class="fab fa-google-plus-g"></i>Incia sesion con Google</span> </button>
         <!-- FIN BOTON DE INICIO DE GOOGLE-->
-
       </div>
+
       <p style="text-align:center"> O  </p>
 
-
+      <!-- Ingreso de correo electronico del usuario -->
       <input type="text" class="form-control" placeholder="Username" #userName required>
 
-
+      <!-- Ingreso de contraseña del usuario -->
       <input type="password" class="form-control" placeholder="Password" #userPassword required>
       
       <!-- BOTON DE INICIO DE SESION-->
-
       <button class="btn btn-success btn-block" type="button" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)"><i class="fas fa-sign-in-alt"></i>Iniciar Sesion</button>     
 
-      </form>
-      
-
-
+  </form>
 </div>
