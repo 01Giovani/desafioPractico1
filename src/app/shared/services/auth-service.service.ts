@@ -86,7 +86,7 @@ export class AuthServiceService {
       
       this.SetUserData(result.user);
     }).catch((error) => {      
-      this.toastr.error('DATOS ERRONEOS', 'Toastr ERROR!');
+      this.toastr.error('DATOS ERRONEOS', 'Error');
     })
   }
 
@@ -95,13 +95,13 @@ export class AuthServiceService {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
       this.router.navigate(['sign-in']);      
-      this.toastr.error('CERRASTE SESION', 'Toastr ERROR!');
+      this.toastr.error('CERRASTE SESION', 'Exito');
     })
   }
 
  // Returns true when user is looged in and email is verified
  get isLoggedIn(): boolean {
-  this.toastr.success('INICIASTE SESION', 'Toastr fun!');
+  this.toastr.success('INICIASTE SESION', 'Exito');
   const user = JSON.parse(localStorage.getItem('user'));
 
 
