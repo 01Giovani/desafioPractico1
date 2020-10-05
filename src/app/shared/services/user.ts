@@ -19,3 +19,9 @@ export class MascotaDTO{
    IdCliente:string;
 }
 
+export class ClienteOutDTO{
+   dui :string;
+   nombre :string;
+   celular :string;
+   nombreMascota :string;
+}

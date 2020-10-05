@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ClienteDTO } from './user';
 
 @Injectable({
@@ -34,7 +34,13 @@ export class HttpService {
 
   setCliente(objCliente){
     var ruta:string = this.url+"GuardarCliente";  
-    return this.http.post(ruta, JSON.stringify(objCliente));
+    
+    
+    return this.http.post(ruta, JSON.stringify(objCliente),
+    {
+      headers:{'Content-Type':'Application/Json'}
+    }
+    );
 
   }
 
