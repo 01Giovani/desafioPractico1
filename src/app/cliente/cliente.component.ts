@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Cliente} from '../cliente'
 import { stringify } from 'querystring';
 import { AuthServiceService } from '../shared/services/auth-service.service';
+import { HttpService } from '../shared/services/http.service';
 
 
 @Component({
@@ -14,10 +15,11 @@ export class ClienteComponent implements OnInit {
   
   listaClientes : Array<Cliente> = [];
   cliente = new Cliente('','','','','',0);  
-
+  
 
   constructor(
-    public authService : AuthServiceService
+    public authService : AuthServiceService,
+    public httpSevice: HttpService
   ) { }
 
 

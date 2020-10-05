@@ -23,7 +23,7 @@ export class Cliente {
     ){
         this.nombre=nombre;
         this.dui= dui;
-        this.nombreMascota=nombre;
+        this.nombreMascota=nombreMascota;
         this.tratamiento=tratamiento;
         this.medicamento=medicamento;
         this.costo=costo;

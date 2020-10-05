@@ -1,0 +1,46 @@
+
+
+<div class="col-md-5">
+    <div class="ibox">
+        <div class="ibox-title">
+            <h4>Listado de consultas</h4>
+        </div>
+        <div class="ibox-content">
+
+            <table class="table">
+                ​
+                <!-- Encabezado de la tabla -->
+                <thead>
+                    <tr>                                                    
+                        <th>DUI</th>
+                        <th>Mascota</th>
+                        <th>Celular</th>
+                        <th>Mascotas</th>
+                        
+                    </tr>
+                </thead>
+                ​
+                <!-- -->
+
+                ​
+                <!-- Cuerpo de la tabla -->
+                <tbody>
+                    <tr *ngFor="let cli of client">                            
+                        <td>{{cli.Dui}}</td>     
+                        <td>{{cli.Nombre}}</td>     
+                        <td>{{cli.Celular}}</td>     
+                        <td>
+                          <p *ngFor="let ma of cli.Mascotas">
+                                {{ma.Nombre}}
+                          </p>
+                        </td>     
+                       
+                    </tr>        
+  
+                </tbody>
+                ​
+                <!-- -->​
+            </table>                
+        </div>
+    </div>
+</div>

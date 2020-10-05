@@ -13,12 +13,19 @@ import { SingInComponent } from './components/sing-in/sing-in.component';
 import { AuthServiceService } from './shared/services/auth-service.service'
 
 import { AppRoutingModule } from './app-routing.module';
+import { CatalogoComponent } from './components/clientes/catalogo/catalogo.component';
+import { CatalogoServiciosComponent } from './components/servicios/catalogo-servicios/catalogo-servicios.component';
+import { CatalogoConsultasComponent } from './components/consultas/catalogo-consultas/catalogo-consultas.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClienteComponent,
-    SingInComponent
+    SingInComponent,
+    CatalogoComponent,
+    CatalogoServiciosComponent,
+    CatalogoConsultasComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,8 @@ import { AppRoutingModule } from './app-routing.module';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
 
   ],
   providers: [AuthServiceService],
