@@ -3,6 +3,7 @@ import {Cliente} from '../cliente'
 import { stringify } from 'querystring';
 import { AuthServiceService } from '../shared/services/auth-service.service';
 import { HttpService } from '../shared/services/http.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class ClienteComponent implements OnInit {
 
   constructor(
     public authService : AuthServiceService,
-    public httpSevice: HttpService
+    public httpSevice: HttpService,
+    private toastr: ToastrService
   ) { }
 
 
@@ -30,7 +32,7 @@ export class ClienteComponent implements OnInit {
   onSubmit(){  
     if(!this.cliente.nombre || !this.cliente.dui || !this.cliente.nombreMascota || !this.cliente.tratamiento || !this.cliente.medicamento || !this.cliente.costo)
       return;
-
+    this.toastr.success('Datos Ingresados Correctamente', 'Exito');
     var local:Cliente = this.cliente;
     var conteoLocal:number =1;
 
