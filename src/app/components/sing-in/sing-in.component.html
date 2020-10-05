@@ -2,18 +2,16 @@
 
 
   <form class="form-signin">
-      <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
+      <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Incia Sesion</h1>
       <div class="social-login">
 
 
-          <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
-
-
-          <button class="btn google-btn social-btn" type="button" (click)="authService.GoogleAuth()"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
-
+        <!-- BOTON DE INICIO DE GOOGLE -->
+          <button class="btn google-btn social-btn" type="button" (click)="authService.GoogleAuth()"><span><i class="fab fa-google-plus-g"></i>Incia sesion con Google</span> </button>
+        <!-- FIN BOTON DE INICIO DE GOOGLE-->
 
       </div>
-      <p style="text-align:center"> OR  </p>
+      <p style="text-align:center"> O  </p>
 
 
       <input type="text" class="form-control" placeholder="Username" #userName required>
