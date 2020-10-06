@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-cliente',
   templateUrl: './cliente.component.html',
-  styleUrls: ['./cliente.component.css']
+  styleUrls: ['./cliente.component.css','./sb-admin-2.min.css']
 })
 export class ClienteComponent implements OnInit {
 
