@@ -1,6 +1,26 @@
-<!-- <app-cliente></app-cliente> --> 
-<a routerLink="/inicio">Inicio</a><br>
-<a routerLink="/sign-in">Inicio de sesión</a><br>
-<a routerLink="/clientes">Clientes</a>
+
+<nav class="navbar navbar-expand-sm navbar-custom">
+    <a href="" class="navbar-brand">Bienvenido</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
+        <i class="fa fa-bars fa-lg py-1 text-white"></i>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarCustom">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/">Inicio de Sesion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/clientes">Clientes</a>
+            </li>
+            <li class="nav-item dropdown">
+               
+            
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <router-outlet></router-outlet>
