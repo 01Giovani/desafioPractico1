@@ -69,14 +69,14 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item">
                   <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                   Activity Log
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Logout
+                  Cerrar Sesion
                 </a>
               </div>
             </li>
@@ -244,7 +244,7 @@
         <div class="modal-body">Si estas seguro de cerrra sesion, da clic en "Si, cerrar sesion"</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" (click)="authService.SignOut()">Si, cerrar sesion</a>
+          <button class="btn btn-primary" type="button" (click)="authService.SignOut()">Si, cerrar sesion</button>
         </div>
       </div>
     </div>
