@@ -7,12 +7,14 @@ import { Routes,RouterModule  } from '@angular/router';
 import { ClienteComponent } from './cliente/cliente.component';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { CatalogoComponent } from './components/clientes/catalogo/catalogo.component';
+import { CatalogoConsultasComponent } from './components/consultas/catalogo-consultas/catalogo-consultas.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: SingInComponent },
   { path: 'inicio', component: ClienteComponent,canActivate:[AuthGuard] },
-  { path: 'clientes', component: CatalogoComponent,canActivate:[AuthGuard] }
+  { path: 'clientes', component: CatalogoComponent,canActivate:[AuthGuard] },
+  { path: 'consultas', component:CatalogoConsultasComponent,canActivate:[AuthGuard] }
 ];
 
 @NgModule({

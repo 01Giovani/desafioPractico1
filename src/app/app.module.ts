@@ -17,6 +17,8 @@ import { CatalogoComponent } from './components/clientes/catalogo/catalogo.compo
 import { CatalogoServiciosComponent } from './components/servicios/catalogo-servicios/catalogo-servicios.component';
 import { CatalogoConsultasComponent } from './components/consultas/catalogo-consultas/catalogo-consultas.component';
 import { HttpClientModule } from '@angular/common/http';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [

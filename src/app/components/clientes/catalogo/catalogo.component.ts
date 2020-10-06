@@ -36,7 +36,7 @@ export class CatalogoComponent implements OnInit {
       alert("Almacenado!")
       this.getListadoClientes();
       this.output = new ClienteOutDTO();
-    },error=>{
+    },error=>{[{"Codigo":1,"Descuento":0.00,"Total":22.30,"IdCliente":"14960223-9","IdMascota":1,"IdServicio":1,"Servicio":{"Codigo":1,"Nombre":"chequeo de rutina","Precio":22.30},"Cliente":{"Dui":"14960223-9","Nombre":"julio","Celular":"61805268","Mascotas":[]},"Mascota":{"Codigo":1,"Nombre":"tommy","IdCliente":"14960223-9"}}]
       alert(JSON.stringify(error))
     })
   }

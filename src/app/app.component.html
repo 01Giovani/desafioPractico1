@@ -1,6 +1,8 @@
-<!-- <app-cliente></app-cliente> --> 
-<a routerLink="/inicio">Inicio</a><br>
-<a routerLink="/sign-in">Inicio de sesión</a><br>
-<a routerLink="/clientes">Clientes</a>
+<div style="width:100%;border:solid 1px; height:40%;background-color: black;">
+<a style="color: white;" routerLink="/sign-in">Inicio de sesión</a>&nbsp;
+<a style="color: white;" routerLink="/clientes">Clientes</a>&nbsp;
+<a style="color: white;" routerLink="/consultas">Consultas</a>&nbsp;
+<a style="color: white;" href="#" (click)="authService.SignOut()">Log out</a> 
+</div>
 
 <router-outlet></router-outlet>

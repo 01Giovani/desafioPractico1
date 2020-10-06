@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes,RouterModule  } from '@angular/router';
+import { AuthServiceService } from './shared/services/auth-service.service';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,7 @@ import { Routes,RouterModule  } from '@angular/router';
 })
 export class AppComponent {
   title = 'guia2';
+
+  constructor(public authService : AuthServiceService){}
+
 }

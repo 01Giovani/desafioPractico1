@@ -1,1 +1,88 @@
-<p>catalogo-consultas works!</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h4>Listado de consultas</h4>
+            </div>
+            <div class="ibox-content">
+
+                <table class="table">
+                    ​
+                    <!-- Encabezado de la tabla -->
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Cliente</th>
+                            <th>Mascota</th>
+                            <th>Servicio</th>
+                            <th>Descuento</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    ​
+                    <!-- -->
+
+                    ​
+                    <!-- Cuerpo de la tabla -->
+                    <tbody>
+                        <tr *ngFor="let con of consultas">
+                            <td>{{con.Codigo}}</td>
+                            <td>{{con.Cliente.Nombre}}</td>
+                            <td>{{con.Mascota.Nombre}}</td>
+                            <td>{{con.Servicio.Nombre}}</td>
+                            <td>{{con.Descuento}}</td>
+                            <td>${{con.Total}}</td>
+                        </tr>
+
+                    </tbody>
+                    ​
+                    ​
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+
+    <div class="col-md-4">
+        <div class="ibox">
+            <div class="row3">
+                <h4>Ingresar datos consulta</h4>
+            </div>
+            <div class="ibox-content">
+
+                <form>
+                    <div class="form-group">
+                        <p>Cliente</p>
+
+                        <select class="form-control" #idCliente required (change)="getMascotas(idCliente.value)">
+                            <option selected="selected" value="">Seleccione...</option>
+                            <option *ngFor="let cli of clientes" value="{{cli.Dui}}">{{cli.Nombre}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <p>Servicio</p>
+                        <select class="form-control" #idServicio required>
+                            <option selected="selected" value="">Seleccione...</option>
+                            <option *ngFor="let ser of servicios" value="{{ser.Codigo}}">{{ser.Nombre}}--${{ser.Precio}}</option>
+                        </select>
+                    </div>
+
+            
+                    <div class="form-group">
+                        <p>Mascotas</p>
+                        <select class="form-control" #idMascota required>
+                            <option selected="selected" value="">Seleccione cliente...</option>
+                            <option *ngFor="let mas of mascotas" value="{{mas.Codigo}}">{{mas.Nombre}}</option>
+                        </select>
+                    </div>
+
+
+
+                    ​<button class="btn-btn-primary" (click)="guardarConsulta(idCliente.value,idServicio.value,idMascota.value)">Guardar</button>
+
+                </form>
+                ​
+            </div>
+        </div>
+    </div>
+</div>

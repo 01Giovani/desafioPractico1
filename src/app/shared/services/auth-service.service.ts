@@ -38,7 +38,7 @@ export class AuthServiceService {
     this.afAuth.signInWithEmailAndPassword(email,password)
     .then((result) => {
       
-      window.location.href = "http://localhost:4200/inicio";
+      window.location.href = "http://localhost:4200/consultas";
       // this.ngZone.run(() => {
       //   this.router.navigate(['inicio']);
         
@@ -77,7 +77,7 @@ export class AuthServiceService {
     return this.afAuth.signInWithPopup(provider)
     .then((result) => {
           
-      window.location.href = "http://localhost:4200/inicio";
+      window.location.href = "http://localhost:4200/consultas";
       //  this.ngZone.run(() => {          
       //     this.router.navigate(['inicio']);
           

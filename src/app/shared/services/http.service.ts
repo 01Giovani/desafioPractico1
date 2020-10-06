@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ClienteDTO } from './user';
+import { ClienteDTO, ConsultaDTO, MascotaDTO, ServicioDTO } from './user';
 
 @Injectable({
   providedIn: 'root'
@@ -17,19 +17,19 @@ export class HttpService {
     });
   }
 
-  getMascotas(){
-    var ruta:string = this.url+"GetMascotas";  
-    return this.http.get(`${this.url}GetMascotas`);
+  getMascotas(dui){
+    var ruta:string = this.url+"GetMascotas?dui="+dui;  
+    return this.http.get<MascotaDTO[]>(ruta);
   }
 
   getServicios(){
     var ruta:string = this.url+"GetServicios";    
-    return this.http.get(ruta);
+    return this.http.get<ServicioDTO[]>(ruta);
   }
 
   getConsultas(){
     var ruta:string = this.url+"GetConsultas";  
-    return this.http.get(ruta);
+    return this.http.get<ConsultaDTO[]>(ruta);
   }
 
   setCliente(objCliente){
@@ -46,6 +46,8 @@ export class HttpService {
 
   setConsulta(objConsulta){
     var ruta:string = this.url+"GuardarConsulta";  
-    return this.http.post(ruta, JSON.stringify(objConsulta));
+    return this.http.post(ruta, JSON.stringify(objConsulta),{
+      headers:{'Content-Type':'Application/Json'}
+    });
   }
 }

@@ -25,3 +25,28 @@ export class ClienteOutDTO{
    celular :string;
    nombreMascota :string;
 }
+
+export class ConsultaDTO{
+   Codigo:number;
+   Descuento:number;
+   Total:number;
+   IdCliente:string;
+   IdMascota:number;
+   IdServicio:number;
+   Cliente:ClienteDTO;
+   Mascota:MascotaDTO;
+   Servicio:ServicioDTO;
+}
+
+export class ServicioDTO{
+   Codigo:number;
+   Nombre:string;
+   Precio:number;
+}
+
+
+export class ConsultaOutDTO{
+   dui:string;
+   idMascota:number;
+   idServicio:number;
+}
